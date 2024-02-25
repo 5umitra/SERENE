@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Chatbot</title>
+    <link rel="stylesheet" href="chat2.css">
+</head>
+
+<body>
+    <div class="chat-container">
+        <div id="heading"><h1>EMMI</h1></div>
+        <div class="chat-history">
+        </div>
+        <div class="message-input">
+            <input type="text" id="message-input" placeholder="Hey, I'm EMMI" autocomplete="off">
+            <button id="send-button">Send</button>
+            
+        </div>
+    </div>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
+    <script type="module" src="chat2.js"></script>
+</body>
+
+</html>

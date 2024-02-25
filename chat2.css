@@ -1,0 +1,147 @@
+
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw; /* Adjust width as needed for different layouts */
+    background-color: #000000;
+    padding: 20px;
+    font-family: sans-serif;
+    border-radius: 14px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  } 
+  
+  .chat-history {
+    flex: 1;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    padding: 0 20px; /* Adjust padding based on layout */
+    /* box-sizing: border-box;
+    width: auto; */
+  }
+   
+  .message {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 0 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    width: 90vh; /* Ensure messages fill available width */
+    /* word-break: break-word; Allow text wrapping if needed */
+  }
+  
+   .user-message {
+    text-align: left;
+    color: rgb(0, 0, 0);
+    height: 50px;
+    margin-right: 60%;
+    border-bottom-right-radius: 60px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.6rem; /* Use relative units for responsiveness */
+    /* background: linear-gradient(to right, rgb(103, 101, 101) 60% ,rgb(229, 223, 223)); */
+    justify-content: flex-start; /* Align messages to right for user */
+    background-color: #f4f3f3;
+  }  
+  
+   .bot-message {
+    text-align: left;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.6rem;
+    height: auto;
+    border-bottom-right-radius: 70px;
+    background-color: grey;
+    margin-left: 50%;
+    justify-content: flex-start; /* Align messages to left for bot */
+    /* background: linear-gradient(to right, rgb(103, 101, 101) 60%,rgb(229, 223, 223));
+     */
+
+  } 
+   
+  #heading {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem; /* Adjust as needed */
+    padding: 20px;
+    border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(to right, rgb(186, 38, 38) 50%,rgb(231, 179, 179));
+
+
+
+
+    margin-bottom: 20px;
+  }
+  
+  .message-input {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    height: 100px;
+    width: 100%;
+    margin-right: 20PX;
+    font-size: 1.6rem;
+    gap: 20px;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 20px;
+    background: linear-gradient(to right, darkred 50%, red );
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+
+
+
+  #message-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  #send-button {
+    background-color: #67202f;
+    color: white;
+    padding: 10px 20px; /* Adjust padding as needed */
+     border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.6rem;
+  } 
+
+  
+  
+  /* Media queries for different screen sizes */
+   @media (max-width: 768px) {
+    .chat-container {
+      width: 90vw; /* Adjust width for smaller screens */
+       padding: 10px;
+    }
+    h1 {
+      font-size: 1.8rem;
+    }
+    .message-input {
+      height: 40px;
+      font-size: 1.4rem;
+    }
+    #message-input {
+      font-size: 1.4rem;
+    }
+    #send-button {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Adjust styles for even smaller screens if needed */
+  }
